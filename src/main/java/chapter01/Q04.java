@@ -1,6 +1,6 @@
 package chapter01;
 
-public class Q04a {
+public class Q04 {
     public static boolean isPalindromePermutation(String string){
         int[] cs = charsPresence(string);
         int odds = oddsCount(cs);
