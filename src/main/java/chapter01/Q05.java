@@ -18,9 +18,15 @@ public class Q05 {
             char c1 = s1.charAt(i);
             char c2 = s2.charAt(i);
 
-            if(c1 == c2) continue;
+            if(c1 == c2){
+                p1 = c1;
+                p2 = c2;
+                continue;
+            }
             if(!mod){
                 mod = true;
+                p1 = c1;
+                p2 = c2;
                 continue;
             }
             if(c1 == p2 || c2 == p1){
