@@ -16,5 +16,7 @@ class Q05Spec extends Specification {
         'pales' | 'pale'    || true
         'pale'  | 'bale'    || true
         'pale'  | 'bake'    || false
+        'pale'  | 'paleee'  || false
+        'pale'  | 'pamee'   || false
     }
 }
