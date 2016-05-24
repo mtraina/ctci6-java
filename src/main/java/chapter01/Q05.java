@@ -14,27 +14,26 @@ public class Q05 {
         char p1 = s1.charAt(0);
         char p2 = s2.charAt(0);
 
-        for(int i = 0; i < l ; i++){
+        for(int i = 0; i < l; i++){
             char c1 = s1.charAt(i);
             char c2 = s2.charAt(i);
 
+            boolean updateVars = false;
             if(c1 == c2){
-                p1 = c1;
-                p2 = c2;
-                continue;
+                updateVars = true;
             }
-            if(!mod){
+            else if(!mod){
                 mod = true;
+                updateVars = true;
+            }
+            else if(c1 == p2 || c2 == p1){
+                updateVars = true;
+            }
+            if(updateVars){
                 p1 = c1;
                 p2 = c2;
-                continue;
             }
-            if(c1 == p2 || c2 == p1){
-                p1 = c1;
-                p2 = c2;
-                continue;
-            }
-            return false;
+            else return false;
         }
         return true;
     }
